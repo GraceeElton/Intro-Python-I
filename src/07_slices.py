@@ -34,4 +34,5 @@ print(a[:-1])
 s = "Hello, world!"
 
 # Output just the 8th-12th characters: "world"
-print()
+#  need to do 
+print(s[7:12])

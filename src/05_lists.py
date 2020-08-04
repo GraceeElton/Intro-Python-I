@@ -42,4 +42,8 @@ print(len(x))
 
 "working on later" 
 # Print all the values in x multiplied by 1000
+my_new_list = [i * 100 for i in x]
+
+print(my_new_list)
+
 # YOUR CODE HERE
