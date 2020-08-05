@@ -10,7 +10,7 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = [ x + 1 for x in range(5)]
+y = [ i for i  in range(1,6)]
 
 print (y)
 
@@ -18,7 +18,7 @@ print (y)
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
 #idk if that is the best way to write it but it works haha
-y = [x*x*x for x in range(10)]
+y = [x**3 for x in range(10)]
 
 print(y)
 
@@ -40,11 +40,10 @@ x = input("Enter comma-separated numbers: ").split(',')
 
 # check if the users number is even (g for g in x)
     # x = the array of the users input. G = the users indivual number
-
 # if it is, print the `evens`s
     #if int(g) % 2 == 0
         # means when the number is diviend by 2 and has a reminder of zero - it is even. 
-        # int makes sure it is an int
+        # int becasue the user is entering a string 
 
 y = [g for g in x if int(g) % 2 == 0]
 print(y)
