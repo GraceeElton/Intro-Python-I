@@ -5,6 +5,8 @@
 x = 12
 
 def change_x():
+    # Use a the global keyword -- https://www.programiz.com/python-programming/global-keyword
+    global x
     x = 99
 
 change_x()
@@ -19,6 +21,8 @@ def outer():
     y = 120
 
     def inner():
+        # use the nolocal keyword https://www.programiz.com/python-programming/global-local-nonlocal-variables
+        nonlocal y
         y = 999
 
     inner()
@@ -27,6 +31,5 @@ def outer():
     # 999?
     # Note: Google "python nested function scope".
     print(y)
-
 
 outer()

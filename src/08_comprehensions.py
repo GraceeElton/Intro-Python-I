@@ -38,6 +38,13 @@ x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
 
-# idk what is going on here.. need to do look furster into modules
+# check if the users number is even (g for g in x)
+    # x = the array of the users input. G = the users indivual number
+
+# if it is, print the `evens`s
+    #if int(g) % 2 == 0
+        # means when the number is diviend by 2 and has a reminder of zero - it is even. 
+        # int makes sure it is an int
+
 y = [g for g in x if int(g) % 2 == 0]
 print(y)

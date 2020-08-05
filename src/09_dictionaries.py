@@ -34,6 +34,8 @@ waypoints = [
 ]
 
 # Add a new waypoint to the list
+waypoints.append({"happy": "no"})
+print(waypoints)
 # YOUR CODE HERE
 
 # Modify the dictionary with name "a place" such that its longitude
@@ -43,5 +45,18 @@ waypoints = [
 
 # YOUR CODE HERE
 
+waypoints[0]["lon"] = -130
+waypoints[0]["name"] = "not a real place"
+
+
 # Write a loop that prints out all the field values for all the waypoints
+# idk how to just get the values when the dict is in a list.
+"""When looping through a sequence, the position index and corresponding 
+value can be retrieved at the same time using the enumerate() function.
+but how does this work when the dic is in a list????"""
+
+
+for key, val in enumerate(waypoints):
+    print(f"Key is {key} and value is {val}")
+
 # YOUR CODE HERE

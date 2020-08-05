@@ -5,6 +5,9 @@
 # the sum. This is what you'd consider to be a regular, normal function.
 
 # YOUR CODE HERE
+def f1(x, y ):
+    return x + y
+
 
 print(f1(1, 2))
 
@@ -14,6 +17,23 @@ print(f1(1, 2))
 
 # YOUR CODE HERE
 
+# https://realpython.com/python-kwargs-and-args/
+
+#example
+    # def my_sum(*args):
+        # result = 0
+    # Iterating over the Python args tuple
+        # for x in args:
+         #     result += x
+            # return result
+
+
+def f2(*numbers):
+    sum = 0
+    for number in numbers:
+        sum += number
+    return sum
+
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
 print(f2(1, 4, -12))            # Should print -7
@@ -22,14 +42,21 @@ print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
 a = [7, 6, 5, 4]
 
 # How do you have to modify the f2 call below to make this work?
-print(f2(a))    # Should print 22
+#use the * so the list can be added to the function? WHY? i have no idea. Just a lucky guess
+print(f2(*a))    # Should print 22
+
 
 # Write a function f3 that accepts either one or two arguments. If one argument,
 # it returns that value plus 1. If two arguments, it returns the sum of the
 # arguments.
 # Note: Google "python default arguments" for a hint.
 
+#https://www.geeksforgeeks.org/default-arguments-in-python/
+
 # YOUR CODE HERE
+# we declare y as 1 if the 2nd argument is not stated
+def f3(x, y=1):
+    return x + y
 
 print(f3(1, 2))  # Should print 3
 print(f3(8))     # Should print 9
@@ -43,11 +70,21 @@ print(f3(8))     # Should print 9
 #
 # Note: Google "python keyword arguments".
 
+#https://treyhunner.com/2018/04/keyword-arguments-in-python/#:~:text=When%20calling%20functions%20in%20Python,make%20function%20calls%20more%20explicit.&text=This%20takes%20a%20file%20object,string%20to%20the%20output%20file.
+
+# Python allows functions to capture any keyword arguments provided to them using the ** operator when defining the function:
+
 # YOUR CODE HERE
+
+def f4(**keywords):
+    for key, value in keywords.items():
+        # see dictionaries for this snipet 
+        print(f"key: {key}, value: {value}")
 
 # Should print
 # key: a, value: 12
 # key: b, value: 30
+
 f4(a=12, b=30)
 
 # Should print
@@ -62,4 +99,5 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(d)
+# follow the same astric trick from above. But use 2 now as the function does.
+f4(**d)
